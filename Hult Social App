@@ -23,6 +23,15 @@ elif Enrollment <= 2006:
 else:
     print ('Error')
 
+newUser.append(FirstName)
+newUser.append(LastName)
+newUser.append(DateOfBirth)
+newUser.append(Nationality)
+newUser.append(CountryOfBirth)
+newUser.append(Languages)
+newUser.append(Description)
+newUser.append(Interests)
+newUser.append(Enrollment)
     
     
 
@@ -35,6 +44,7 @@ print(Languages)
 print(Description)
 print(Interests)
 print(Enrollment)
+
 
 #SAMMY CURRY MAKING AFTER PROFILE IS CREATED TO ADD LINKS
 
@@ -54,8 +64,9 @@ SocialMedias= input('Would you like to add your social medias to your profile? t
 y= ('thanks')
 n= ('okay no worries')
 
-if input == y:
-    print('Copy and paste your social media links here, this will show up under your bio for people to see!: ')
-elif input == n:
-    print('No worries you can always add them later!')
+if SocialMedias == 'y':
+    print(input('Copy and paste your social media links here, this will show up under your bio for people to see!: '))
+elif SocialMedias == 'n':
+    print(input('No worries you can always add them later!'))
+    
     
