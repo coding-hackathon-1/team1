@@ -1,4 +1,11 @@
-#This is the master file for the app 
+#Username Validation 
 
+print('Welcome to the Hult Social App! You are one click away from your fellow Hultians!')
+print('Please, insert username.')
 
+username = input('username')
+if '@student.hult.edu' in username:
+    print('valid username')
+else:
+    print('username not valid')
 
