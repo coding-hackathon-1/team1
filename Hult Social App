@@ -141,7 +141,7 @@ You can also add you social medias to your profile so other Hult students can fi
 SocialMedias= input('Would you like to add your social medias to your profile? type y if yes and n if no: ')
 
 
-#if entered y or n it will print the following, y will make a box to copy and pasta links
+#if entered y or n it will print the following, y will make another enter box to copy and paste links into
 if SocialMedias == 'y':
     print(input('Copy and paste your social media links here, this will show up under your bio for people to see!: '))
 elif SocialMedias == 'n':
