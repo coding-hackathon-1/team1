@@ -112,13 +112,17 @@ for tag in tags:
     print(tags.index(tag)+1, tag)
     
     
-choice = input("\n\nEnter number of choice: ")
+choice = input("\n\nEnter number of choice or other: ")
 choice_tags_list.append(choice)
 
-
-while choice != "Done" or "done":
+other= (input('Tell me what you intrested in!: '))
+    
+while choice != "Done":
     choice = input("Enter number of choice: ")
-    choice_tags_list.append(choice)    
+    choice_tags_list.append(choice)
+    
+    if choice == other:
+        print(input())    
 
 ######################################################
 
