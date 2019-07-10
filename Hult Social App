@@ -11,4 +11,5 @@ if '@student.hult.edu' in username:
     print('valid username')
 else:
     print('username not valid')
-
+    print(input('Please enter again:'))
+    #Last line asks for the username again, in case the privous attempted was invalid.
