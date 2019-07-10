@@ -1,4 +1,91 @@
-#This is the master file for the app 
+#This is the master file for the app password check  
+
+def upper(input):
+    upper = 0 
+    upperList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".split()
+    for char in input:
+        if char in upperList:
+            upper += 1
+    if upper > 0:
+        return True
+    else:
+        return False
+
+def lower(input):
+    lowers = 0
+    lowerList = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
+    for char in input:
+        if char in lowerList:
+            lowers += 1
+    if lowers > 0:
+        return True
+    else:
+        return False
+
+def number(input):
+    numbers = 0
+    numberList = "1 2 3 4 5 6 7 8 9 0".split()
+    for char in input:
+        if char in numberList:
+            numbers += 1
+    if numbers > 0:
+        return True
+    else:
+        return False
+
+def special(input):
+    special = 0
+    specialList = "! @ $ % ^ & * ( ) _ - + = { } [ ] | \ , . > < / ? ~ ` \" ' : ;".split()
+    for char in input:
+        if char in specialList:
+            specials += 1
+    if specials > 0:
+        return True
+    else:
+        return False
+
+def length (input):
+    if len(input) >= 8:
+        return True
+    else:
+        return False
 
 
+def validPassword(input):
+    checks = {
+        'upper': upper(input),
+        'lower': lower(input),
+        'number': number(input),
+        'special': special(input),
+        'len' : check(input)
+    }
+    if upper(input) & lower(input) & number(input) & special(input) & len (input):
+        return True
+        print("Password is valid thank you!")
+    else:
+        print ("Invalid password! Please try again")
+        print
+        if check_dict['upper'] == False:
+            print ("Password needs at least one upper-case character.")
+        if check_dict['lower'] == False:
+            print ("Password needs at least one lower-case character.")
+        if check_dict['number'] == False:
+            print ("Password needs at least one number.")
+        if check_dict['special'] == False:
+            print ("Password needs at least one special character.")
+        if check_dict['len'] == False:
+            print ("Password needs to be at least 8 characters in length.")
+        print                  
+
+if True:
+
+    password = input("Enter desired password: ")
+    print
+    
+if validPassword(password):
+    print ("Password meets all requirements and may be used.")
+    print 
+    print ("Exiting program...")
+    print
+    exit()
 
