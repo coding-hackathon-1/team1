@@ -8,12 +8,12 @@ print('Please, insert username.')
 
 
 #if statement to check for the requirement, the email address has to be a Hult email.
-username = input('username')
+username = input('Username: ')
 if '@student.hult.edu' in username: 
-    print('valid username')
+    print('Valid Username')
 else:
-    print('username not valid')
-    print(input('Please enter again:'))
+    print('Username is not valid')
+    print(input('Please enter again: '))
     #Last line asks for the username again, in case the privous attempted was invalid.
     
 --------------------------------------
@@ -25,7 +25,59 @@ def upper(password):
     for char in password:
         if char in upperList:
             upper += 1
+    if upper > 0:def upper(password):
+    upper = 0 
+    upperList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".split()
+    for char in password:
+        if char in upperList:
+            upper += 1
     if upper > 0:
+        return True
+    else:
+        return False
+   
+def lower(password):
+    lowers = 0
+    lowerList = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
+    for char in password:
+        if char in lowerList:
+            lowers += 1
+    if lowers > 0:
+        return True
+    else:
+        return False
+        
+        
+def number(password):
+    numbers = 0
+    numberList = "1 2 3 4 5 6 7 8 9 0".split()
+    for char in password:
+        if char in numberList:
+            numbers += 1
+    if numbers > 0:
+        return True
+    else:
+        return False
+        
+    
+def length (password):
+    if len(password) >= 8:
+        return True
+    else:
+        return False
+        
+password = input("Enter desired password: ")
+
+while True:
+    if upper(password) and lower(password) and number(password) and length(password) == True: 
+        print("Password is valid, thank you!")
+        break         
+    elif upper(password) == False or lower(password) == False or number(password) or length(password) == False: 
+            print ("Invalid password! Please try again\n")
+            password = input("Enter desired password: ")
+            print("Password is valid, thank you!")
+            break
+            
         return True
     else:
         return False
@@ -120,11 +172,11 @@ profile_info.to_excel('profile_info.xlsx',
                      index = False)
                      
  
-print(profile_info)
+profile_info
 
 ---------------------------------------------
 #SAMMY CURRY MAKING AFTER PROFILE IS CREATED TO ADD LINKS
-#After all input it prints out back to them thier infomation aswell as thier bio
+#After all input it prints out back to them their infomation aswell as their bio
 
 print(f"""
 Dear {FirstName} {LastName}, 
@@ -134,7 +186,7 @@ Dear {FirstName} {LastName},
 To make your profile better we have added what you entered about yourself to your bio! \n' {Description}'. 
 
  
-You can also add you social medias to your profile so other Hult students can find you on other platforms!
+You can also add you social medias to your profile, so other Hult students can find you on other platforms!
 """) 
 
 #this gives the option for them to input social medias and find out if they want to or not
@@ -143,9 +195,9 @@ SocialMedias= input('Would you like to add your social medias to your profile? t
 
 #if entered y or n it will print the following, y will make another enter box to copy and paste links into
 if SocialMedias == 'y':
-    print(input('Copy and paste your social media links here, this will show up under your bio for people to see!: '))
+    print(input('Copy and paste your social media links here. They will show up under your bio for people to see!: '))
 elif SocialMedias == 'n':
-    print('No worries you can always add them later!')
+    print('No worries, you can always add them later!')
     
     
 --------------------------------------------------- 
