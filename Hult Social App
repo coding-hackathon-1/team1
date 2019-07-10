@@ -45,6 +45,7 @@ password = input("Enter desired password: ")
 while True:
     if upper(password) and lower(password) and number(password) and length(password) == True: 
                 print("Password is valid thank you!")
+                break
             
     elif upper(password) == False or lower(password) == False or number(password) or length(password) == False: 
             print ("Invalid password! Please try again\n")
