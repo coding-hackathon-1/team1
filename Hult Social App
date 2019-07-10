@@ -1,4 +1,31 @@
 #This is the master file for the app 
 
+# Matching Algorithm (Needs work)
 
+def tags_selected(user_tags):
+    for x in user_tags.items():
+        return x
+
+
+
+def matches_counter(tags_selected):
+    tags = tags_selected(user_tags)
+    match_counter = 0
+    for y in tags:
+        if y in user_tags.tags():
+            match_counter +=1
+            continue
+        return y    
+
+            
+tags_selected(user_tags)
+matches_counter(tags_selected)
+
+#Still in progress
+for user, tags in user_tags.items():
+    print(user)
+    print(tags)
+    for x in user_tags['juan']:
+        if x in user_tags['sophia'] and user_tags['Sammy']:
+            print(tags)
 
