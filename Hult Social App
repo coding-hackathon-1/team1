@@ -74,6 +74,10 @@ df = pd.DataFrame.from_dict(newUser)
 
 df.to_excel('profile_info.xlsx')
 
+#Creating tags list 
+# --> Missing: function to add non existent tags 
+tags = ['sports', 'soccer', 'football', 'dance', 'hike', 'social media']
+
 FirstName=str(input("Enter your First name: "))
 LastName=str(input("Enter your Last name: "))
 DateOfBirth=str(input("Enter your Date of Birth (MM.DD.YYYY): "))
@@ -150,10 +154,6 @@ if SocialMedias == 'y':
     print(input('Copy and paste your social media links here, this will show up under your bio for people to see!: '))
 elif SocialMedias == 'n':
     print('No worries you can always add them later!')
-
-#Creating tags list 
-# --> Missing: function to add non existent tags 
-tags = ['sports', 'soccer', 'football', 'dance', 'hike', 'social media']
 
 user_tags = {}
 for index, row in profile_info.iterrows():
