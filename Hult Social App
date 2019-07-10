@@ -42,11 +42,11 @@ def length (password):
 
 password = input("Enter desired password: ")
 
-while True: 
+while True:
     if upper(password) and lower(password) and number(password) and length(password) == True: 
-            print("Password is valid thank you!")
+                print("Password is valid thank you!")
+            
+    elif upper(password) == False or lower(password) == False or number(password) or length(password) == False: 
+            print ("Invalid password! Please try again\n")
+            password = input("Enter desired password: ")
             break
-    while upper(password) and lower(password) and number(password) and length(password) == False: 
-        print ("Invalid password! Please try again\n")
-        password = input("Enter desired password: ")
-
