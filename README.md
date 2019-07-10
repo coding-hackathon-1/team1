@@ -1,6 +1,8 @@
 # team1
 
 Student Path: 
+
+
 Stage 1: Username + password with check 
 - Sammy + Fernando 
 Stage 2: Profile building + questionnaire 
