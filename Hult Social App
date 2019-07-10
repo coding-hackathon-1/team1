@@ -116,7 +116,7 @@ choice = input("\n\nEnter number of choice: ")
 choice_tags_list.append(choice)
 
 
-while choice != "Done":
+while choice != "Done" or "done":
     choice = input("Enter number of choice: ")
     choice_tags_list.append(choice)    
 
