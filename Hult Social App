@@ -1,10 +1,13 @@
 #Username Validation 
 
+#Welcome message
 print('Welcome to the Hult Social Hub! You are one click away from your fellow Hultians!')
 print('Please, insert username.')
 
+
+#if statement to check for the requirement, the email address has to be a Hult email.
 username = input('username')
-if '@student.hult.edu' in username:
+if '@student.hult.edu' in username: 
     print('valid username')
 else:
     print('username not valid')
