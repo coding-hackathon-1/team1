@@ -6,16 +6,19 @@
 
 newUser = []
 
-FirstName=str(input("Enter your First name: "))
-LastName=str(input("Enter your Last name: "))
-DateOfBirth=str(input("Enter your Date of Birth (MM.DD.YYYY): "))
-Nationality= str(input("What is your nationality?: "))
-CountryOfBirth= str(input("Hm, and where were you born?: "))
-Languages= str(input("What languages do you speak?: "))
-Description= str(input("Tell us about yourself: "))
-Interests= str(input("What are you insterested in? (mention couple of things) : "))
-print("When did you enroll into Hult?: ")
+FirstName=str(input("Enter your First name: ")) #input of a First Name of the user
+LastName=str(input("Enter your Last name: ")) #input of a Last Name of the user
+DateOfBirth=str(input("Enter your Date of Birth (MM.DD.YYYY): ")) #input of a Date of Birth of the user
+Nationality= str(input("What is your nationality?: ")) #input of the nationality of the user
+CountryOfBirth= str(input("Hm, and where were you born?: ")) #input of a Place of Birth of the user
+Languages= str(input("What languages do you speak?: ")) #input all the Languages that user speaks
+Description= str(input("Tell us about yourself: ")) #input bio
+Interests= str(input("What are you insterested in? (mention couple of things) : ")) #input interests
+print("When did you enroll into Hult?: ") #input enrollment year
 
+
+#HULT was established in 2007
+#if a use will mess with the year, the program is going to say that it's wrong
 
 Enrollment = int(input('Enrollment: '))
 
@@ -29,6 +32,9 @@ elif Enrollment <= 2006:
 else:
     print ('Error')
 
+
+#creating a list
+
 newUser.append(FirstName)
 newUser.append(LastName)
 newUser.append(DateOfBirth)
@@ -41,6 +47,8 @@ newUser.append(Enrollment)
     
     
 
+#printing inputs
+
 print(FirstName)
 print(LastName)
 print(DateOfBirth)
@@ -50,3 +58,5 @@ print(Languages)
 print(Description)
 print(Interests)
 print(Enrollment)
+
+print(newUser) #print list
