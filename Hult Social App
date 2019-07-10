@@ -1,6 +1,6 @@
 #Username Validation 
 
-print('Welcome to the Hult Social App! You are one click away from your fellow Hultians!')
+print('Welcome to the Hult Social Hub! You are one click away from your fellow Hultians!')
 print('Please, insert username.')
 
 username = input('username')
