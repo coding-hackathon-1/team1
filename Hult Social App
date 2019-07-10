@@ -99,7 +99,9 @@ elif Enrollment <= 2006:
     print('Something went wrong...')
 else:
     print ('Error')
-    
+
+################################################
+
 #Input for each user to add
 choice_tags_list = []
 
@@ -117,7 +119,9 @@ choice_tags_list.append(choice)
 while choice != "Done":
     choice = input("Enter number of choice: ")
     choice_tags_list.append(choice)    
-    
+
+######################################################
+
 newUser.append({'UserID':FirstName + LastName,
                'Date_of_birth': DateOfBirth,
                'Nationality': Nationality,
