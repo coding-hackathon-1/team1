@@ -1,4 +1,36 @@
-#This is the master file for the app 
+#This is the master file for the app
+
+#Starting user dictionary of {user: list of tags chosen}
+user_tags = {}
+
+#Creating tags list 
+# --> Missing: function to add non existent tags 
+tags = ['sports', 'soccer', 'football', 'dance', 'hike', 'social media']
+
+#Input for each user to add
+choice_tag_list = []
+
+print("Please select all tags you like. ")
+print("When you are done, write 'Done'. ")
+
+for tag in tags: 
+    print(tags.index(tag)+1, tag)
+    print('\n')
+    
+choice = input("Enter number of choice: ")
+choice_tag_list.append(choice)
 
 
+while choice != "Done":
+    choice = input("Enter number of choice: ")
+    choice_tag_list.append(choice)
+    
+#Printing check 
+del(choice_tag_list[-1])
+print(choice_tag_list)
 
+#User tests --> key will be name user 
+user_tags ['juan'] = choice_tag_list
+
+#printing check
+print(user_tags)
