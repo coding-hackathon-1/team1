@@ -2,3 +2,21 @@
 
 
 
+#The first questions that can be asked
+
+FirstName=str(input("Enter your First name: "))
+LastName=str(input("Enter your Last name: "))
+DateOfBirth=str(input("Enter your Date of Birth (MM.DD.YYYY): "))
+Nationality= str(input("What is your nationality?: "))
+CountryOfBirth= str(input("Hm, and where were you born?: "))
+Languages= str(input("What languages do you speak?: "))
+Description= str(input("Tell us about yourself: "))
+Interests= str(input("What are you insterested in?: "))
+Enrollment= str(input("When did you enroll into Hult?: "))
+
+Enrollment = 2006
+
+if Enrollment > 2006:
+    print(Enrollment)
+else:
+    print ('Something went wrong...')
