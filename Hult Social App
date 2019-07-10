@@ -1,4 +1,50 @@
 #This is the master file for the app 
 
+#profile info
+
+newUser = []
+
+FirstName=str(input("Enter your First name: "))
+LastName=str(input("Enter your Last name: "))
+DateOfBirth=str(input("Enter your Date of Birth (MM.DD.YYYY): "))
+Nationality= str(input("What is your nationality?: "))
+CountryOfBirth= str(input("Hm, and where were you born?: "))
+Languages= str(input("What languages do you speak?: "))
+Description= str(input("Tell us about yourself: "))
+Interests= str(input("What are you insterested in? (mention couple of things) : "))
+print("When did you enroll into Hult?: ")
 
 
+Enrollment = int(input('Enrollment: '))
+
+if Enrollment > 2006 and Enrollment <= 2019:
+    print(Enrollment)
+elif Enrollment > 2019:
+    print('Something went wrong...')
+
+elif Enrollment <= 2006:
+    print('Something went wrong...')
+else:
+    print ('Error')
+
+newUser.append(FirstName)
+newUser.append(LastName)
+newUser.append(DateOfBirth)
+newUser.append(Nationality)
+newUser.append(CountryOfBirth)
+newUser.append(Languages)
+newUser.append(Description)
+newUser.append(Interests)
+newUser.append(Enrollment)
+    
+    
+
+print(FirstName)
+print(LastName)
+print(DateOfBirth)
+print(Nationality)
+print(CountryOfBirth)
+print(Languages)
+print(Description)
+print(Interests)
+print(Enrollment)
