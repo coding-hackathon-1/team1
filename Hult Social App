@@ -1,4 +1,4 @@
-#This is the master file for the app password check  
+#This is for the input of infomation and adding a bio and getting them to upload thier soicla media links 
 
 FirstName=str(input("Enter your First name: "))
 LastName=str(input("Enter your Last name: "))
@@ -47,6 +47,7 @@ print(Enrollment)
 
 
 #SAMMY CURRY MAKING AFTER PROFILE IS CREATED TO ADD LINKS
+#After all input it prints out back to them thier infomation aswell as thier bio
 
 print(f"""
 Dear {FirstName}{LastName}, 
@@ -59,11 +60,11 @@ To make your profile better we have added what you entered about yourself to you
 You can also add you social medias to your profile so other Hult students can find you on other platforms!
 """) 
 
+#this gives the option for them to input social medias and find out if they want to or not
 SocialMedias= input('Would you like to add your social medias to your profile? type y if yes and n if no: ')
 
-y= ('thanks')
-n= ('okay no worries')
 
+#if entered y or n it will print the following, y will make a box to copy and pasta links
 if SocialMedias == 'y':
     print(input('Copy and paste your social media links here, this will show up under your bio for people to see!: '))
 elif SocialMedias == 'n':
