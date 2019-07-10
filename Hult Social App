@@ -117,7 +117,7 @@ choice_tags_list.append(choice)
 
 other= (input('Tell me what you intrested in!: '))
     
-while choice != "Done":
+while choice != "Done" and choice != "done":
     choice = input("Enter number of choice: ")
     choice_tags_list.append(choice)
     
