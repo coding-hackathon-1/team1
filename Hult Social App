@@ -190,9 +190,9 @@ profile_info
 ########################################################
 choices = []
 ########################################################
-tags = ['sports', 'soccer', 'football', 'dance', 'hike', 'social media', 'gym', 'books', 'cooking', 'music',
-        'travel', 'biking', 'walk', 'shopping', 'food', 'nightclubs', 'family', 'movies', 'gaming', 'beach',
-        'sleeping', 'socializing', 'cars', 'art', 'theater', 'concerts', 'fitness', 'animals']
+tags = ['sports', 'soccer', 'football', 'biking', 'hike', 'cars','gym', 'walk', 'fitness', 'travel','beach',
+        'family', 'animals','shopping', 'socializing','social media', 'nightclubs','sleeping', 'cooking', 
+        'food', 'concerts','art','books', 'theater', 'dance', 'movies', 'gaming', 'music']
 #Input for each user to add
 choice_tags_list = []
 ##############################
