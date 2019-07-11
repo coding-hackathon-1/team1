@@ -15,13 +15,13 @@ CHANGE OF IDEA: Platform on WeChat (include Chinese people), a platform that com
 Wednesday 10th July Morning: 
 
 Coding:
--Stage 1: Username + password with check 
+–Stage 1: Username + password with check 
 Sammy + Fernando 
--Stage 2: Profile building + questionnaire 
+–Stage 2: Profile building + questionnaire 
 Anastasiia 
--Stage 3: Tags 
+–Stage 3: Tags 
 Juan + Sophia 
--Stage 4: Algorithm 
+–Stage 4: Algorithm 
 Juan + Sophia 
 
 *** Excel file 
