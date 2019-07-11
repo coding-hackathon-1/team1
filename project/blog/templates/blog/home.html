@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+	<h1>Welcome to Hult Social Hub!</h1>
+  <img src="https://storage-prtl-co.imgix.net/endor/organisations/638/images/1509626828_web-Campus-Exterior-4.jpg" alt="school" width="400" height="280" >
+
+  <h6>Hello and welcome to the new Hult app, this is the easiest way to communicate with your fellow students! </h6>
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'blog-blogpost' %}">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+
+	{% endblock %}

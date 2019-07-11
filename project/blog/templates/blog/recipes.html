@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% block content %}
+	<h1>Student life</h1>
+	<br><br>
+	<h2>MBA in San Francisco</h2>
+	<p>Click to read all about the MBA program</p>
+	<style >
+		.button {
+		  background-color: blue;
+		  border: none;
+		  color: white;
+		  padding: 15px 25px;
+		  text-align: center;
+		  font-size: 16px;
+		  cursor: pointer;
+ 		}
+		.button:hover {
+  			background-color: blue;
+		}
+	</style>
+	<form action="https://www.hult.edu/en/programs/mba/mba-san-francisco/">
+		<button class="button" type="subbmit">Click here</button>
+	</form>
+	 <br><br>
+	<h2>Link to Hult login page</h2>
+	<p>Click to get directly to Hult page</p>
+	<form action="https://my.hult.edu/">
+		<button class="button" type="subbmit">Click here</button>
+	</form>
+	<br><br>
+	<h2>Keep in touch through Hults Facebook!</h2>
+	<p>Click on link to hult facebook page</p>
+	<form action="https://www.facebook.com/Hult/">
+		<button class="button" type="subbmit">Click here</button>
+	</form>
+{% endblock content %} 
