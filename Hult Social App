@@ -69,6 +69,8 @@ while True:
 newUser = []
 
 import pandas as pd
+from datetime import datetime
+
 print(newUser)
 df = pd.DataFrame.from_dict(newUser)
 
@@ -80,13 +82,39 @@ tags = ['sports', 'soccer', 'football', 'dance', 'hike', 'social media']
 
 FirstName=str(input("Enter your First name: "))
 LastName=str(input("Enter your Last name: "))
-DateOfBirth=str(input("Enter your Date of Birth (MM.DD.YYYY): "))
+
+
+def date_of_birth():
+    DateOfBirth = input("Enter your Date of Birth (MM.DD.YYYY): ")
+    
+    try:
+        dateofbirthcheck=datetime.strptime(DateOfBirth, '%m.%d.%Y')
+    
+    except ValueError:
+        print("PLEASE use the correct format or you will get a virus!!!!")
+        x = input("Press 1 to try again")
+        
+        if '1' in x or 'try again' in x:
+            date_of_birth()
+        
+        else:
+            exit(0)
+        
+    return DateOfBirth
+
+date_of_birth()
+
+
+print(DateOfBirth)
+
+
+
+
 Nationality= str(input("What is your nationality?: "))
 CountryOfBirth= str(input("Hm, and where were you born?: "))
 Languages= str(input("What languages do you speak?: "))
 Description= str(input("Tell us about yourself: "))
 print("When did you enroll into Hult?: ")
-
 
 Enrollment = int(input('Enrollment: '))
 
