@@ -36,3 +36,17 @@ Wednesday 10th July Afternoon:
 -Started presentation
 
 still on to do list: visual represation of the outlook on django using HTML & CSS, Carry on with presentation. 
+
+Wednesday Night 10th July:
+-ER diagram is compleate
+-Created demo website to show for presentation with links photos and blogs
+-code almost compleate one bug left to fix
+-Presentation started and refrences are added 
+-Updated all code on different branches
+
+to do tomorrow morning:
+-Finish presentation
+-Add all code together on Master branch
+-Finish commenting on all code
+-Any last min fixes before presentation
+-PRESENT!!
