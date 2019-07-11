@@ -15,6 +15,7 @@ CHANGE OF IDEA: Platform on WeChat (include Chinese people), a platform that com
 Wednesday 10th July Morning: 
 
 Coding:
+
 –Stage 1: Username + password with check 
 (Sammy + Fernando) 
 
