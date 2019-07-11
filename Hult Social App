@@ -81,51 +81,7 @@ while True:
         return True
     else:
         return False
-   
-   
- def lower(password):
-    lowers = 0
-    lowerList = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
-    for char in password:
-        if char in lowerList:
-            lowers += 1
-    if lowers > 0:
-        return True
-    else:
-        return False
-        
-        
- def number(password):
-    numbers = 0
-    numberList = "1 2 3 4 5 6 7 8 9 0".split()
-    for char in password:
-        if char in numberList:
-            numbers += 1
-    if numbers > 0:
-        return True
-    else:
-        return False
-        
-    
-  def length (password):
-    if len(password) >= 8:
-        return True
-    else:
-        return False
-        
-password = input("Enter desired password: ")
-
-while True:
-    if upper(password) and lower(password) and number(password) and length(password) == True: 
-        print("Password is valid thank you!")
-        break         
-    elif upper(password) == False or lower(password) == False or number(password) or length(password) == False: 
-            print ("Invalid password! Please try again\n")
-            password = input("Enter desired password: ")
-            print("Password is valid thank you!")
-            break
-            
-            
+ 
  -------------------------------------------
  newUser = []
 
@@ -214,6 +170,7 @@ if SocialMedias == 'y':
 elif SocialMedias == 'n':
     print('No worries, you can always add them later!')
 
+########################################################
 newUser.append({'UserID':FirstName + LastName,
                'Date_of_birth': DateOfBirth,
                'Nationality': Nationality,
@@ -225,18 +182,14 @@ newUser.append({'UserID':FirstName + LastName,
 
 profile_info = df.append(newUser, 
                         ignore_index = True)
-
-#creating excel document
 profile_info.to_excel('profile_info.xlsx', 
                      index = False)
                      
- 
-#displays the table
-
+########################################################
 profile_info
-
+########################################################
 choices = []
-
+########################################################
 tags = ['sports', 'soccer', 'football', 'dance', 'hike', 'social media', 'gym', 'books', 'cooking', 'music',
         'travel', 'biking', 'walk', 'shopping', 'food', 'nightclubs', 'family', 'movies', 'gaming', 'beach',
         'sleeping', 'socializing', 'cars', 'art', 'theater', 'concerts', 'fitness', 'animals']
@@ -255,30 +208,35 @@ while choice_count < 5:
     choice_tags_list.append(choice) 
     choice_count += 1
 print(choice_tags_list)
-
+total = sum(choice_tags_list)
+if total > 130:
+    print("Error. You selected tags that are non-existent.")
+print(total)
+########################################################
+choice_tags_list.append(total)
 choices.append(choice_tags_list)
 print(choices)
-
-
+########################################################
 user_tags = {}
-
+########################################################
 for index, row in profile_info.iterrows():
     for choice in choice_tags_list: 
         user_tags [row['UserID']] = choices[index]
 
 print(user_tags)
-
+########################################################
 userID = []
 for key, value in user_tags.items():
     userID.append(key)
-
+########################################################
 userID
-
-tag1 = []
+ ########################################################
+ tag1 = []
 tag2 = []
 tag3 = []
 tag4 = []
 tag5 = []
+tags_sum = []
 
 for user, tags in user_tags.items():
     tag1.append(tags[0])
@@ -286,16 +244,90 @@ for user, tags in user_tags.items():
     tag3.append(tags[2])
     tag4.append(tags[3])
     tag5.append(tags[4])
-    
-
-print(tag1,tag2,tag3,tag4,tag5)
-
+    tags_sum.append(tags[5])
+########################################################
+print(tag1,tag2,tag3,tag4,tag5,tags_sum)
+########################################################
 df_temp = dict({"tag1": tag1,
                 "tag2": tag2,
                 "tag3": tag3,
                 "tag4": tag4,
-                "tag5": tag5})
+                "tag5": tag5,
+                "sum": tags_sum})
 
 tag_data = pd.DataFrame(df_temp)
+tag_data.index = userID
+#tag_data = tag_data.transpose()
 tag_data
----------------------------------------------
+########################################################
+sum_values = (tag_data.loc[:, ["sum"]])
+print(sum_values)
+########################################################
+temp = 0
+group1 = {}
+group2 = {}
+group3 = {}
+group4 = {}
+
+index = 0
+for item in tags_sum:
+    if item <= 32:
+        group1[userID[index]] = item
+    elif item <= 64:
+        group2[userID[index]] = item
+    elif item <= 96:
+        group3[userID[index]] = item
+    else:
+        group4[userID[index]] = item
+    index+=1
+print(group1)
+print(group2)
+print(group3)
+print(group4)
+########################################################
+import random
+
+while group1: 
+    random.seed(len(group1))
+    pair1 = random.choice(list(group1.keys()))
+    pair2 = random.choice(list(group1.keys()))
+    pair3 = random.choice(list(group1.keys()))
+    pair4 = random.choice(list(group1.keys()))
+    print(f"""hey {pair1} you have similar interests with {pair2}""")
+    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
+    break
+
+while group2:
+    random.seed(len(group2))
+    pair1 = random.choice(list(group2.keys()))
+    pair2 = random.choice(list(group2.keys()))
+    pair3 = random.choice(list(group2.keys()))
+    pair4 = random.choice(list(group2.keys()))
+    print(f"""hey {pair1}you ghave similar interests with {pair2}""")
+    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
+
+    break
+    
+while group3: 
+    random.seed(len(group3))
+    pair1 = random.choice(list(group3.keys()))
+    pair2 = random.choice(list(group3.keys()))
+    pair3 = random.choice(list(group3.keys()))
+    pair4 = random.choice(list(group3.keys()))
+    print(f"""hey {pair1}you ghave similar interests with {pair2}""")
+    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
+
+    break
+    
+while group4:
+    random.seed(len(group4))
+    pair1 = random.choice(list(group4.keys()))
+    pair2 = random.choice(list(group4.keys()))
+    pair3 = random.choice(list(group4.keys()))
+    pair4 = random.choice(list(group4.keys()))
+    print(f"""hey {pair1}you ghave similar interests with {pair2}""")
+    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
+
+    break
+########################################################
+                    
