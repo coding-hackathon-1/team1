@@ -17,10 +17,13 @@ Wednesday 10th July Morning:
 Coding:
 –Stage 1: Username + password with check 
 Sammy + Fernando 
-n\–Stage 2: Profile building + questionnaire 
+
+–Stage 2: Profile building + questionnaire 
 Anastasiia 
+
 –Stage 3: Tags 
 Juan + Sophia 
+
 –Stage 4: Algorithm 
 Juan + Sophia 
 
