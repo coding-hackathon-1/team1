@@ -102,10 +102,6 @@ while True:
             password = input("Enter desired password: ")
             print("Password is valid, thank you!")
             break
-            
-        return True
-    else:
-        return False
  
  #####################################################################################       
  #This creates an empty list where we add
