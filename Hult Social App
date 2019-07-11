@@ -90,6 +90,7 @@ def date_of_birth():
         
     return DateOfBirth
  #####################################################################################       
+#This code asks the user for a password, and calling all functions we did to check, it checks if the password is valid.
 password = input("Enter desired password: ")
 
 while True:
@@ -107,6 +108,7 @@ while True:
         return False
  
  #####################################################################################       
+ #This creates an empty list where we add
  newUser = []
  #####################################################################################       
 
@@ -124,28 +126,7 @@ FirstName=str(input("Enter your First name: "))
 LastName=str(input("Enter your Last name: "))
 
 #checking if the date format is correct before taking it to the database
-def date_of_birth():
-    DateOfBirth = input("Enter your Date of Birth (MM.DD.YYYY): ")
-    
-    try:
-        dateofbirthcheck=datetime.strptime(DateOfBirth, '%m.%d.%Y')
-    
-    except ValueError:
-        print("PLEASE use the correct format which is MM.DD.YYYY")
-        x = input("Press 1 to try again")
-        
-        if '1' in x or 'try again' in x:
-            date_of_birth()
-        
-        else:
-            exit(0)
-        
-    return DateOfBirth
-
-date_of_birth()
-
-
-print(DateOfBirth)
+date = date_of_birth()
 
 
 #continuation of the questionnaire after the date has been verified
@@ -199,8 +180,9 @@ elif SocialMedias == 'n':
     print('No worries, you can always add them later!')
 
 ########################################################
+#Appending the information to create a database into profile_info
 newUser.append({'UserID':FirstName + LastName,
-               'Date_of_birth': DateOfBirth,
+               'Date_of_birth': date,
                'Nationality': Nationality,
                'Country': CountryOfBirth,
                'Languages': Languages,
@@ -214,21 +196,28 @@ profile_info.to_excel('profile_info.xlsx',
                      index = False)
                      
 ########################################################
+#Displays the dataframe.
 profile_info
 ########################################################
+#Creates a list that will contain lists of the tag choices of every user, plus the sum of their tags.
 choices = []
 ########################################################
+#These are the options for the users to choose what their interests are.
 tags = ['sports', 'soccer', 'football', 'biking', 'hike', 'cars','gym', 'walk', 'fitness', 'travel','beach',
         'family', 'animals','shopping', 'socializing','social media', 'nightclubs','sleeping', 'cooking', 
         'food', 'concerts','art','books', 'theater', 'dance', 'movies', 'gaming', 'music']
 #Input for each user to add
 choice_tags_list = []
 ##############################
+#Creating a for loop that prints each tag as a menu.
+
 print("Please select all tags you like. ")
 
 
 for tag in tags: 
     print(tags.index(tag)+1, tag)
+
+#Creating a while loop to check that the choices the user is inputting
 
 choice_count = 0
 while choice_count < 5:
