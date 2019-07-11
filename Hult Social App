@@ -190,30 +190,6 @@ elif Enrollment <= 2006:
 else:
     print ('Error')
     
-#creating a list
-
-newUser.append({'UserID':FirstName + LastName,
-               'Date_of_birth': DateOfBirth,
-               'Nationality': Nationality,
-               'Country': CountryOfBirth,
-               'Languages': Languages,
-               'Description': Description,
-               'Enrollment': Enrollment})
-
-
-profile_info = df.append(newUser, 
-                        ignore_index = True)
-
-#creating excel document
-profile_info.to_excel('profile_info.xlsx', 
-                     index = False)
-                     
- 
-#displays the table
-
-profile_info
-
----------------------------------------------
 #SAMMY CURRY MAKING AFTER PROFILE IS CREATED TO ADD LINKS
 #After all input it prints out back to them their infomation aswell as their bio
 
@@ -237,7 +213,89 @@ if SocialMedias == 'y':
     print(input('Copy and paste your social media links here. They will show up under your bio for people to see!: '))
 elif SocialMedias == 'n':
     print('No worries, you can always add them later!')
-    
-    
---------------------------------------------------- 
 
+newUser.append({'UserID':FirstName + LastName,
+               'Date_of_birth': DateOfBirth,
+               'Nationality': Nationality,
+               'Country': CountryOfBirth,
+               'Languages': Languages,
+               'Description': Description,
+               'Enrollment': Enrollment})
+
+
+profile_info = df.append(newUser, 
+                        ignore_index = True)
+
+#creating excel document
+profile_info.to_excel('profile_info.xlsx', 
+                     index = False)
+                     
+ 
+#displays the table
+
+profile_info
+
+choices = []
+
+tags = ['sports', 'soccer', 'football', 'dance', 'hike', 'social media', 'gym', 'books', 'cooking', 'music',
+        'travel', 'biking', 'walk', 'shopping', 'food', 'nightclubs', 'family', 'movies', 'gaming', 'beach',
+        'sleeping', 'socializing', 'cars', 'art', 'theater', 'concerts', 'fitness', 'animals']
+#Input for each user to add
+choice_tags_list = []
+##############################
+print("Please select all tags you like. ")
+
+
+for tag in tags: 
+    print(tags.index(tag)+1, tag)
+
+choice_count = 0
+while choice_count < 5:
+    choice = int(input("Enter number of choice: "))
+    choice_tags_list.append(choice) 
+    choice_count += 1
+print(choice_tags_list)
+
+choices.append(choice_tags_list)
+print(choices)
+
+
+user_tags = {}
+
+for index, row in profile_info.iterrows():
+    for choice in choice_tags_list: 
+        user_tags [row['UserID']] = choices[index]
+
+print(user_tags)
+
+userID = []
+for key, value in user_tags.items():
+    userID.append(key)
+
+userID
+
+tag1 = []
+tag2 = []
+tag3 = []
+tag4 = []
+tag5 = []
+
+for user, tags in user_tags.items():
+    tag1.append(tags[0])
+    tag2.append(tags[1])
+    tag3.append(tags[2])
+    tag4.append(tags[3])
+    tag5.append(tags[4])
+    
+
+print(tag1,tag2,tag3,tag4,tag5)
+
+df_temp = dict({"tag1": tag1,
+                "tag2": tag2,
+                "tag3": tag3,
+                "tag4": tag4,
+                "tag5": tag5})
+
+tag_data = pd.DataFrame(df_temp)
+tag_data
+---------------------------------------------
