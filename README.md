@@ -18,7 +18,7 @@ Coding:
 Stage 1: Username + password with check 
 - Sammy + Fernando 
 Stage 2: Profile building + questionnaire 
-- Annastasiia 
+- Anastasiia 
 Stage 3: Tags 
 - Juan + Sophia 
 Stage 4: Algorithm 
