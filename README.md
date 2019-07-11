@@ -16,16 +16,16 @@ Wednesday 10th July Morning:
 
 Coding:
 –Stage 1: Username + password with check 
-Sammy + Fernando 
+(Sammy + Fernando) 
 
 –Stage 2: Profile building + questionnaire 
-Anastasiia 
+(Anastasiia) 
 
 –Stage 3: Tags 
-Juan + Sophia 
+(Juan + Sophia) 
 
 –Stage 4: Algorithm 
-Juan + Sophia 
+(Juan + Sophia) 
 
 *** Excel file 
 
