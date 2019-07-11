@@ -138,11 +138,11 @@ df = pd.DataFrame.from_dict(newUser)
 
 df.to_excel('profile_info.xlsx')
 
-#the start of the inputs where we get the infomation begins here
+#the start of the inputs, where we get the infomation, begins here
 FirstName=str(input("Enter your First name: "))
 LastName=str(input("Enter your Last name: "))
 
-#this is to make sure that the date that was input is in the correct format before we take it to the database
+#checking if the date format is correct before taking it to the database
 def date_of_birth():
     DateOfBirth = input("Enter your Date of Birth (MM.DD.YYYY): ")
     
@@ -167,14 +167,17 @@ date_of_birth()
 print(DateOfBirth)
 
 
-#continuation of the questions after the date has been verified
+#continuation of the questionnaire after the date has been verified
+
 Nationality= str(input("What is your nationality?: "))
 CountryOfBirth= str(input("Hm, and where were you born?: "))
 Languages= str(input("What languages do you speak?: "))
 Description= str(input("Tell us about yourself: "))
 print("When did you enroll into Hult?: ")
 
-#making sure that the enrollment year is valid
+#HULT was established in 2007
+#if a use will mess with the year, the program is going to say that it's wrong
+
 Enrollment = int(input('Enrollment: '))
 
 if Enrollment > 2006 and Enrollment <= 2019:
@@ -187,6 +190,8 @@ elif Enrollment <= 2006:
 else:
     print ('Error')
     
+#creating a list
+
 newUser.append({'UserID':FirstName + LastName,
                'Date_of_birth': DateOfBirth,
                'Nationality': Nationality,
@@ -198,10 +203,14 @@ newUser.append({'UserID':FirstName + LastName,
 
 profile_info = df.append(newUser, 
                         ignore_index = True)
+
+#creating excel document
 profile_info.to_excel('profile_info.xlsx', 
                      index = False)
                      
  
+#displays the table
+
 profile_info
 
 ---------------------------------------------
