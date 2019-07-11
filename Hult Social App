@@ -16,8 +16,8 @@ else:
     print(input('Please enter again: '))
     #Last line asks for the username again, in case the privous attempted was invalid.
     
---------------------------------------
-#Check password
+###############################################################
+#Function Pool 
 
 def upper(password):
     upper = 0 
@@ -66,6 +66,25 @@ def length (password):
     else:
         return False
         
+from datetime import datetime
+def date_of_birth():
+    DateOfBirth = input("Enter your Date of Birth (MM.DD.YYYY): ")
+    
+    try:
+        dateofbirthcheck=datetime.strptime(DateOfBirth, '%m.%d.%Y')
+    
+    except ValueError:
+        print("PLEASE use the correct format which is MM.DD.YYYY")
+        x = input("Press 1 to try again")
+        
+        if '1' in x or 'try again' in x:
+            date_of_birth()
+        
+        else:
+            exit(0)
+        
+    return DateOfBirth
+ #####################################################################################       
 password = input("Enter desired password: ")
 
 while True:
@@ -82,12 +101,13 @@ while True:
     else:
         return False
  
- -------------------------------------------
+ #####################################################################################       
  newUser = []
+ #####################################################################################       
+
 
 #import packages for the following code
 import pandas as pd
-from datetime import datetime
 
 print(newUser)
 df = pd.DataFrame.from_dict(newUser)
@@ -145,7 +165,10 @@ elif Enrollment <= 2006:
     print('Something went wrong...')
 else:
     print ('Error')
-    
+
+ #####################################################################################       
+
+
 #SAMMY CURRY MAKING AFTER PROFILE IS CREATED TO ADD LINKS
 #After all input it prints out back to them their infomation aswell as their bio
 
@@ -287,47 +310,48 @@ print(group4)
 ########################################################
 import random
 
+index = 0
 while group1: 
-    random.seed(len(group1))
-    pair1 = random.choice(list(group1.keys()))
-    pair2 = random.choice(list(group1.keys()))
-    pair3 = random.choice(list(group1.keys()))
-    pair4 = random.choice(list(group1.keys()))
-    print(f"""hey {pair1} you have similar interests with {pair2}""")
-    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
-    break
+    if index < len(group1):
+        pair1 = random.choice(list(group1.keys()))
+        pair2 = random.choice(list(group1.keys()))
+        while pair2 == pair1: 
+            pair2 = random.choice(list(group1.keys()))
+        print(f"""hey {pair1} you have similar interests with {pair2}""")
+        index +=2
+        break
 
-while group2:
-    random.seed(len(group2))
-    pair1 = random.choice(list(group2.keys()))
-    pair2 = random.choice(list(group2.keys()))
-    pair3 = random.choice(list(group2.keys()))
-    pair4 = random.choice(list(group2.keys()))
-    print(f"""hey {pair1}you ghave similar interests with {pair2}""")
-    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
-
-    break
+index = 0
+while group2: 
+    if index < len(group2):
+        pair1 = random.choice(list(group2.keys()))
+        pair2 = random.choice(list(group2.keys()))
+        while pair2 == pair1: 
+            pair2 = random.choice(list(group2.keys()))
+        print(f"""hey {pair1} you have similar interests with {pair2}""")
+        index +=2
+        break
     
+index = 0
 while group3: 
-    random.seed(len(group3))
-    pair1 = random.choice(list(group3.keys()))
-    pair2 = random.choice(list(group3.keys()))
-    pair3 = random.choice(list(group3.keys()))
-    pair4 = random.choice(list(group3.keys()))
-    print(f"""hey {pair1}you ghave similar interests with {pair2}""")
-    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
-
-    break
+    if index < len(group3):
+        pair1 = random.choice(list(group3.keys()))
+        pair2 = random.choice(list(group3.keys()))
+        while pair2 == pair1: 
+            pair2 = random.choice(list(group3.keys()))
+        print(f"""hey {pair1} you have similar interests with {pair2}""")
+        index +=2
+        break
     
-while group4:
-    random.seed(len(group4))
-    pair1 = random.choice(list(group4.keys()))
-    pair2 = random.choice(list(group4.keys()))
-    pair3 = random.choice(list(group4.keys()))
-    pair4 = random.choice(list(group4.keys()))
-    print(f"""hey {pair1}you ghave similar interests with {pair2}""")
-    print(f"""hey {pair3} yoy have similar interests with {pair4}""")
-
-    break
+index = 0
+while group4: 
+    if index < len(group4):
+        pair1 = random.choice(list(group4.keys()))
+        pair2 = random.choice(list(group4.keys()))
+        while pair2 == pair1: 
+            pair2 = random.choice(list(group4.keys()))
+        print(f"""hey {pair1} you have similar interests with {pair2}""")
+        index +=2
+        break
 ########################################################
                     
